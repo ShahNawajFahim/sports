@@ -5,45 +5,39 @@ body {
 
 /* top-banner start*/
 .top-banner {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: black;
     color: white;
-    height: 480px;
-    width: 1200px;
+    width: 75%;
     display: flex;
-    flex-direction: row-reverse;
-    column-gap: 150px;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 18px;
-    padding-left: 40px;
+    margin: 80px 200px;
 }
 
 .written-part {
-    margin-right: 100px;
+    margin: 40px;
 }
 
 /* animation start */
 
 @keyframes sliding {
     0% {
-        left: 8px;
+        left: 195px;
         top: 200px;
     }
 
     50% {
-        top: 10px;
+        top: 75px;
     }
 
     100% {
-        left: 700px;
+        left: 1000px;
         top: 200px;
     }
 }
 
 .top-banner:hover .ball {
+    display: block;
     position: absolute;
     width: 80px;
     margin: 0%;
@@ -58,23 +52,15 @@ body {
 .ball-size img {
     width: 70px;
     height: 70px;
+    display: none;
 }
 
 .marcelo img {
-    margin-right: 20px;
+    margin: 40px 20px 10px 20px;
 }
 
-h1 {
+.written-part h1 {
     font-size: 60px;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
 }
 
 .link-show {
@@ -93,16 +79,15 @@ header {
 /* main start */
 .container {
     display: flex;
-    justify-content: center;
-    margin-right: -30px;
+    justify-content: space-evenly;
+    margin: 0px 200px;
+
 
 }
 
 .article-part {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    margin: 0px 0px 0px 0px;
 
 }
 
@@ -111,35 +96,44 @@ header {
     box-shadow: 0px 0px 0px 0px rgba(174, 168, 168, 0.2);
     border-radius: 15px;
     border: 0.1px solid rgba(232, 226, 226, 0.9);
-    width: 250px;
 }
 
 .blog {
     justify-content: center;
     align-items: center;
-    /* margin-right: -30px; */
-
+    margin: 0px 0px 0px 0px;
 }
 
-.blog h3,
+.blog img {
+    width: 100%;
+}
+
+.placing {
+    padding: 10px 15px;
+}
+
+.placing h3,
 p {
     text-align: center;
 }
 
-.placing {
-    padding: 20px;
-}
-
 .side-view {
     display: flex;
-    justify-content: center
+    justify-content: space-evenly;
 }
 
-#vs {
-    font-weight: 700;
-    padding: 5px;
-    margin-top: 10px;
+.side-view img {
+    width: 120px;
+    height: 60px;
 }
+
+.side-view span {
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+
 
 .read-button {
     text-decoration: none;
@@ -151,11 +145,9 @@ p {
 
 }
 
-.article-icon {
-    display: flex;
-    gap: 10px;
-    color: rgb(157, 152, 152);
-    padding: 0px 15px 15px;
+.article-icon span {
+    padding-left: 60px;
+    font-size: 20px;
 
 }
 
@@ -206,6 +198,19 @@ p {
 
 }
 
+.btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    background-color: #f64f4f;
+    margin-left: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 42%;
+    display: none;
+}
+
 /* footer  */
 footer {
     text-align: center;
@@ -240,4 +245,88 @@ footer a {
 .awesome-icon a {
     padding: 30px 100px 30px 30px;
 
+}
+
+/* media Queries */
+
+@media only screen and (max-width:670px) {
+    .top-banner {
+        display: block;
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+    }
+
+    .top-banner:hover .ball {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .short-chart {
+        margin: auto;
+    }
+
+    .article-part {
+        grid-template-columns: repeat(1, 1fr);
+        width: 75%;
+        margin: auto;
+    }
+
+    .linking {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:671px) and (max-width:992px) {
+    .top-banner {
+        width: 95%;
+        margin: 30px;
+    }
+
+    .top-banner:hover .ball {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .short-chart {
+        margin: auto;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .article-part {
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        margin: auto;
+    }
+
+    .btn {
+        display: block;
+        margin-top: 25px;
+    }
+
+
+    footer hr {
+        margin-bottom: 40px;
+        color: #585353;
+    }
 }
